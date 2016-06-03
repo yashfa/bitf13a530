@@ -1,0 +1,565 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <!-- TITLE -->
+    <title>Gofar</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,600,400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- CSS LIBRARY -->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/lib/awe-booking-font.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/lib/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/lib/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/lib/jquery-ui.css">
+    <!-- REVOLUTION DEMO -->
+    <link rel="stylesheet" type="text/css" href="~/revslider_demo/css/settings.css">
+
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/demo.css">
+
+    <!-- CSS COLOR -->
+    <link id="colorreplace" rel="stylesheet" type="text/css" href="~/Content/css/colors/blue.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<!--[if IE 7]> <body class="ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 8]> <body class="ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]> <body class="ie9 lt-ie10"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<body onload="func()">
+
+    <script>
+        function func() {
+
+
+            var final = "";
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            xmlhttp2.open("GET", "../Home/hottrips?textName=" + final, true);
+            xmlhttp2.send();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+
+                    response1 = xmlhttp2.responseText;
+
+                }
+                document.getElementById("tdiv1").innerHTML = response1;
+
+            }
+
+        }
+    </script>
+
+    <!--<![endif]-->
+    <!-- PAGE WRAP -->
+    <div id="page-wrap">
+        <!-- PRELOADER -->
+        <div class="preloader"></div>
+        <!-- END / PRELOADER -->
+        <!--<![endif]-->
+        <!-- PAGE WRAP -->
+        <div id="page-wrap">
+
+            @Html.Partial("_header");
+            <script>
+                var xtmp = document.getElementById("menuhome");
+                xtmp.className += ' current-menu-parent';
+            </script>
+
+        </div>
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div id="slider-revolution">
+                <ul>
+                    <li data-slotamount="7" data-masterspeed="500" data-title="Luxury">
+                        <img src="~/Images/bg/sl1.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+
+                        <div style="color:#ff0000" class="tp-caption sfb fadeout slider-caption-sub slider-caption-sub-1" data-x="100" data-y="130" data-speed="700" data-start="1500" data-easing="easeOutBack">
+                            Luxury Places
+                        </div>
+
+                        <div style="color:#0094ff" class="tp-caption sfb fadeout slider-caption slider-caption-1" data-x="200" data-y="180" data-speed="700" data-easing="easeOutBack" data-start="2000">Top discount Hotels</div>
+                    </li>
+
+                    <li data-slotamount="7" data-masterspeed="500" data-title="Trips">
+                        <img src="~/Images/bg/sl2.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+
+                        <div style="color:#808080" class="tp-caption  sft fadeout slider-caption-sub slider-caption-sub-2" data-x="center" data-y="220" data-speed="700" data-start="1500" data-easing="easeOutBack">
+                            Check out hot trips
+                        </div>
+
+                        <div class="tp-caption sft fadeout slider-caption slider-caption-2" data-x="center" data-y="260" data-speed="700" data-easing="easeOutBack" data-start="2000">
+                            Travel with us
+                        </div>
+                    </li>
+
+                    <li data-slotamount="7" data-masterspeed="500" data-title="Destinations">
+                        <img src="~/Images/bg/sl3.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+
+                        <div class="tp-caption lfl fadeout slider-caption slider-caption-1" data-x="center" data-y="260" data-speed="700" data-easing="easeOutBack" data-start="1500">
+                            Beautiful destinations awaiting you
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <!-- END / HERO SECTION -->
+        <!-- SEARCH TABS -->
+        <section>
+            <div class="container">
+                <div class="awe-search-tabs tabs">
+                    <ul>
+                        <li>
+                            <a href="#awe-search-tabs-1">
+                                <i class="awe-icon awe-icon-briefcase"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#awe-search-tabs-3">
+                                <i class="awe-icon awe-icon-plane"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="awe-search-tabs__content tabs__content">
+                        <div id="awe-search-tabs-1" class="search-flight-hotel">
+                            <h2>Hajj Umrah</h2>
+                            <form action="~/Home/hajjvalues" method="post">
+                                <div class="form-group">
+                                    <div class="form-elements">
+                                        <label>Name</label>
+                                        <div class="form-item">
+                                            <input type="text" name="name" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-elements">
+                                        <label>City</label>
+                                        <div class="form-item">
+                                            <i class="awe-icon awe-icon-marker-1"></i>
+                                            <input type="text" name="city" value="Ankara, Turkey" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+
+                                    <div class="form-elements">
+                                        <label>Adult</label>
+                                        <select name="adults">
+                                            <option value="null">Select..</option>
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">More than 10</option>
+                                        </select>
+                                        <br /><span>12 yo and above</span>
+                                    </div>
+                                    <div class="form-elements">
+                                        <label>Kids</label>
+                                        <select name="kids">
+                                            <option value="null">Select..</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">More than 10</option>
+                                        </select>
+                                        <br /><span>0-11 yo</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-elements">
+                                        <label>Email</label>
+                                        <div class="form-item">
+                                            <input type="email" name="email" placeholder="abc@email.com" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-elements">
+                                        <label>Cell Number</label>
+                                        <div class="form-item">
+                                            <input type="text" name="cellno" placeholder="+923331231231" pattern="[\+]\d{2}\d{2}\d{4}\d{4}" required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <input type="submit" value="Proceed">
+                                </div>
+                            </form>
+                        </div>
+                        
+
+                        <div id="awe-search-tabs-3" class="search-flight">
+                            <h2>Search Flight</h2>
+                            <form action="~/Home/saveflight" method="post">
+
+                                <div class="form-group">
+                                    <div class="form-elements">
+                                        <label>From</label>
+                                        <div class="form-item">
+                                            <i class="awe-icon awe-icon-marker-1"></i>
+                                            <input type="text" name="from" value="Ho Chi Minh, Hanoi, Vietnam" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-elements">
+                                        <label>To</label>
+                                        <div class="form-item">
+                                            <i class="awe-icon awe-icon-marker-1"></i>
+                                            <input type="text" name="to" value="Ankara, Turkey" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-elements">
+                                        <label>Depart on</label>
+                                        <div class="form-item">
+                                            <i class="awe-icon awe-icon-calendar"></i>
+                                            <input type="text" name="departon" class="awe-calendar" value="Check in" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-elements">
+                                        <label>Return on</label>
+                                        <div class="form-item">
+                                            <i class="awe-icon awe-icon-calendar"></i>
+                                            <input type="text" name="returnon" class="awe-calendar" value="Check out" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-elements">
+                                        <label>Adult</label>
+                                        <select name="adults">
+                                            <option value="null">Select..</option>
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">More than 10</option>
+                                        </select>
+
+                                        <span>12 yo and above</span>
+                                    </div>
+                                    <div class="form-elements">
+                                        <label>Kids</label>
+                                        <select name="kids">
+                                            <option value="null">Select..</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">More than 10</option>
+                                        </select>
+                                        <span>0-11 yo</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-elements">
+                                        <label>Budget</label>
+                                        <input type="text" name="budget" placeholder="Rs 150000 (optional)">
+                                    </div>
+                                    <div class="form-elements">
+                                        <label>Phone Number</label>
+                                        <div class="form-item">
+                                            <input type="text" name="phoneno" placeholder="+923331234567" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}\d{4}" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-elements">
+                                        <label>Email</label>
+                                        <div class="form-item">
+                                            <input type="email" name="email" placeholder="abc@email.com" required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END / SEARCH TABS -->
+        <!-- MASONRY -->
+        <!--
+        <section class="masonry-section-demo">
+            <div class="container">
+                <div class="destination-grid-content">
+                    <div class="section-title">
+                        <h3>More than <a href="destinations-grid.html">238 Destinations</a> is waiting</h3>
+                    </div>
+                    <div class="row">
+                        <div class="awe-masonry">
+                            <!-- GALLERY ITEM -->
+        <!-- END / MASONRY -->
+
+
+        <section class="sale-flights-section-demo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="sale-flights-tabs tabs">
+                            <ul>
+                                <li><a href="#sale-flights-tabs-1">Hot trips</a></li>
+                            </ul>
+                            <div class="sale-flights-tabs__content tabs__content">
+                                <div id="sale-flights-tabs-1">
+
+                                    <div id="tdiv1">
+
+                                    </div>
+                                    <!-- ITEM -->
+                                    <!--<div class="trip-item">
+                                        <div class="item-media">
+                                            <div class="image-cover">
+                                                <img src="~/Images/trip/1.jpg" alt="">
+                                            </div>
+                                            <div class="trip-icon">
+                                                <img src="~/Images/trip.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="item-body">
+                                            <div class="item-title">
+                                                <h2>
+                                                    <a href="#">Spectacular City Views</a>
+                                                </h2>
+                                            </div>
+                                            <div class="item-list">
+                                                <ul>
+                                                    <li>4 Attractions</li>
+                                                    <li>2 days, 1 night</li>
+                                                </ul>
+                                            </div>
+                                            <div class="item-footer">
+                                                <div class="item-rate">
+                                                    <span>7.5 Good</span>
+                                                </div>
+                                                <div class="item-icon">
+                                                    <i class="awe-icon awe-icon-gym"></i>
+                                                    <i class="awe-icon awe-icon-car"></i>
+                                                    <i class="awe-icon awe-icon-food"></i>
+                                                    <i class="awe-icon awe-icon-level"></i>
+                                                    <i class="awe-icon awe-icon-wifi"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-price-more">
+                                            <div class="price">
+                                                Adult ticket
+                                                <ins>
+                                                    <span class="amount">$200</span>
+                                                </ins>
+                                                <del>
+                                                    <span class="amount">$200</span>
+                                                </del>
+
+                                            </div>
+                                            <a href="#" class="awe-btn">Book now</a>
+                                        </div>
+                                    </div>-->
+                                    <!-- END / ITEM -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="awe-services">
+                            <h2>Why your friends like our services?</h2>
+                            <ul class="awe-services__list">
+                                <li>
+                                    <a href="#">
+                                        <i class="awe-icon awe-icon-check"></i>
+                                        <i class="awe-icon awe-icon-arrow-right"></i>
+                                        100,000 real deals
+                                        <span>No booking fees . No fake</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="awe-icon awe-icon-check"></i>
+                                        <i class="awe-icon awe-icon-arrow-right"></i>
+                                        100% trusted reviews
+                                        <span>We verify them in person</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="awe-icon awe-icon-check"></i>
+                                        <i class="awe-icon awe-icon-arrow-right"></i>
+                                        24/7 global support
+                                        <span>anytime and any where</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="awe-icon awe-icon-check"></i>
+                                        <i class="awe-icon awe-icon-arrow-right"></i>
+                                        Quality service
+                                        <span>anytime and any where</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="awe-icon awe-icon-check"></i>
+                                        <i class="awe-icon awe-icon-arrow-right"></i>
+                                        Manage your bookings online
+                                        <span>anytime and any where</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="video-wrapper embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/50880604"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        @Html.Partial("_footer");
+
+    </div>
+    <!-- END / PAGE WRAP -->
+    <!-- LOAD JQUERY -->
+    <script type="text/javascript" src="~/Content/js/lib/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/lib/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/lib/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="~/Content/js/lib/jquery.owl.carousel.js"></script>
+    <script type="text/javascript" src="~/Content/js/lib/theia-sticky-sidebar.js"></script>
+    <script type="text/javascript" src="~/Content/js/lib/jquery.magnific-popup.min.js"></script>
+    <script type='text/javascript' src="~/Content/js/lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="~/Content/js/scripts.js"></script>
+
+    <!-- REVOLUTION DEMO -->
+    <script type="text/javascript" src="~/revslider_demo/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="~/revslider_demo/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript">
+        if ($('#slider-revolution').length) {
+            $('#slider-revolution').show().revolution({
+                ottedOverlay: "none",
+                delay: 10000,
+                startwidth: 1600,
+                startheight: 650,
+                hideThumbs: 200,
+
+                thumbWidth: 100,
+                thumbHeight: 50,
+                thumbAmount: 5,
+
+
+                simplifyAll: "off",
+
+                navigationType: "none",
+                navigationArrows: "solo",
+                navigationStyle: "preview4",
+
+                touchenabled: "on",
+                onHoverStop: "on",
+                nextSlideOnWindowFocus: "off",
+
+                swipe_threshold: 0.7,
+                swipe_min_touches: 1,
+                drag_block_vertical: false,
+
+                parallax: "mouse",
+                parallaxBgFreeze: "on",
+                parallaxLevels: [7, 4, 3, 2, 5, 4, 3, 2, 1, 0],
+
+
+                keyboardNavigation: "off",
+
+                navigationHAlign: "center",
+                navigationVAlign: "bottom",
+                navigationHOffset: 0,
+                navigationVOffset: 20,
+
+                soloArrowLeftHalign: "left",
+                soloArrowLeftValign: "center",
+                soloArrowLeftHOffset: 20,
+                soloArrowLeftVOffset: 0,
+
+                soloArrowRightHalign: "right",
+                soloArrowRightValign: "center",
+                soloArrowRightHOffset: 20,
+                soloArrowRightVOffset: 0,
+
+                shadow: 0,
+                fullWidth: "on",
+                fullScreen: "off",
+
+                spinner: "spinner2",
+
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+
+                shuffle: "off",
+
+                autoHeight: "off",
+                forceFullWidth: "off",
+
+
+
+                hideThumbsOnMobile: "off",
+                hideNavDelayOnMobile: 1500,
+                hideBulletsOnMobile: "off",
+                hideArrowsOnMobile: "off",
+                hideThumbsUnderResolution: 0,
+
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                startWithSlide: 0
+            });
+        }
+    </script>
+
+</body>
+
+</html>

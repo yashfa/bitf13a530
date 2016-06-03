@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database1" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Database1ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.addpkg" Member="addpkgs">
+    <Type Name="addpkg">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="price" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="image" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="pkg" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.addtrippackage" Member="addtrippackages">
+    <Type Name="addtrippackage">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="imagep" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="attraction" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="days" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nights" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="triptype" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="distance" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="services" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.feedback" Member="feedbacks">
+    <Type Name="feedback">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="website" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="company" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.flight" Member="flights">
+    <Type Name="flight">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[from]" Member="from" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="[to]" Member="to" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="departon" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="returnon" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="adults" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kids" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="budget" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="phoneno" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hajjform" Member="hajjforms">
+    <Type Name="hajjform">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="[cell no]" Member="cell_no" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="best" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="people" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="adults" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kids" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[print  name]" Member="print__name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="pkg" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Table]" Member="Tables">
+    <Type Name="Table">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[from]" Member="from" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[to]" Member="to" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="departon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="returnon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="adults" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kids" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="budget" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="phoneno" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="pkgid" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[user]" Member="users">
+    <Type Name="user">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="pimage" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

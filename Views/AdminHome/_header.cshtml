@@ -1,0 +1,112 @@
+﻿<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="index2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>A</b>LT</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Admin</b>LTE</span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <!-- /.messages-menu -->
+                        <!-- Notifications Menu -->
+                        <!-- Tasks Menu -->
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <!-- The user image in the navbar-->
+                                <img src="@Url.Content(Session["proimage"].ToString())" class="user-image" alt="">
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span class="hidden-xs">@Session["username"]</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+                                <li class="user-header">
+                                    <img src="@Url.Content(Session["proimage"].ToString())" class="img-circle" alt="">
+                                    <p>
+                                        @Session["username"]
+                                       
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+                                <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="~/AdminHome/signout" class="btn btn-default btn-flat">Sign out</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+                                <!-- Menu Footer-->
+
+                            </ul>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="@Url.Content(Session["proimage"].ToString())" class="img-circle" alt="" />
+                    </div>
+                    <div class="pull-left info">
+                        <p>@Session["username"]</p>
+                        <!-- Status -->
+                        <a href="#"><i class="fa fa-circle text-success"></i> Status</a>
+                    </div>
+                </div>
+
+                <!-- /.search form -->
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu">
+                    <li class="header">HEADER</li>
+                    <!-- Optionally, you can add icons to the links -->
+                    <li id="lc"><a href="~/AdminHome/Index"><i class="fa fa-link"></i> <span>Home</span></a></li>
+                    <li id="lp"><a href="~/AdminHome/profile"><i class="fa fa-link"></i><span>Update Profile</span></a></li>
+                    <li id="lat"><a href="~/AdminHome/alltrips"><i class="fa fa-link"></i><span>Trip Packages</span></a></li>
+                    <li id="lr"><a href="~/AdminHome/register"><i class="fa fa-link"></i><span>Register Member</span></a></li>
+                    <li id="lt"><a href="~/AdminHome/addTrip"><i class="fa fa-link"></i><span>Add Trip</span></a></li>
+                    <li id="lh"><a href="~/AdminHome/hajj"><i class="fa fa-link"></i><span>Hajj Umrah</span></a></li>
+                    <li id="lu"><a href="~/AdminHome/hajj_umrah_package"><i class="fa fa-link"></i><span>Add Packages</span></a></li>
+                    <li id="lk"><a href="~/AdminHome/flight"><i class="fa fa-link"></i><span>Flight requests</span></a></li>
+                    <li id="ltf"><a href="~/AdminHome/tripform"><i class="fa fa-link"></i><span>Trip requests</span></a></li>
+                    <li id="lco"><a href="~/AdminHome/compose"><i class="fa fa-link"></i><span>Compose</span></a></li>
+                    <li id="lf"><a href="~/AdminHome/feedback"><i class="fa fa-link"></i><span>Feedback</span></a></li>
+                    <!--<li class="treeview">
+                        <a href="#"><i class="fa fa-link"></i> <span>Mail</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="">Inbox</a></li>
+                            <li><a href="">Compose</a></li>
+                            <li><a href="">Read</a></li>
+                        </ul>
+                    </li>-->
+                </ul>
+                <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
